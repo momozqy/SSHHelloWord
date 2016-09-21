@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+ 
+<struts>
+ 
+  <constant name="struts.devMode" value="true" />
+ <constant name="struts.allowed.action.names" value="[a-zA-Z]*"/>
+  <package name="default" extends="struts-default">
+    <action name="index">
+      <result>/index.jsp</result>
+    </action>
+    <action name="helloAction" class="com.xiaoyu.action.HelloAction" method="execute">
+      <result name="success">/hello.jsp</result>
+      <result name="error">/error.jsp</result>
+    </action>
+  </package>
+</struts>
